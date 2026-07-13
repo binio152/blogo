@@ -1,0 +1,269 @@
+@import "tailwindcss";
+
+/* Force light mode - Override dark mode preferences */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  color-scheme: light;
+}
+
+/* Disable dark mode completely */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+    color-scheme: light;
+  }
+}
+
+/* Force light mode on html and body */
+html {
+  background-color: #ffffff;
+  color: #000000;
+  color-scheme: light;
+}
+
+body {
+  background-color: #ffffff;
+  color: #171717;
+  font-family: Arial, Helvetica, sans-serif;
+  color-scheme: light;
+}
+
+/* Line Clamp Utilities */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Article Content Optimization */
+.article-content {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.article-content h1 {
+  font-size: 2.25rem;
+}
+
+.article-content h2 {
+  font-size: 1.875rem;
+}
+
+.article-content h3 {
+  font-size: 1.5rem;
+}
+
+.article-content h4 {
+  font-size: 1.25rem;
+}
+
+.article-content p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.article-content a {
+  color: #4aa3d1;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.article-content a:hover {
+  color: #65bbdf;
+  text-decoration: underline;
+}
+
+.article-content ul,
+.article-content ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.article-content ul {
+  list-style-type: disc;
+}
+
+.article-content ol {
+  list-style-type: decimal;
+}
+
+.article-content li {
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+}
+
+.article-content blockquote {
+  border-left: 4px solid #65bbdf;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #6b7280;
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.article-content code {
+  background: #f3f4f6;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  color: #1f2937;
+  font-family: "Courier New", monospace;
+}
+
+.article-content pre {
+  background: #1f2937;
+  color: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.article-content pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 2rem auto;
+  display: block;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.article-content table th,
+.article-content table td {
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.article-content table th {
+  background: #f9fafb;
+  font-weight: 600;
+}
+
+.article-content hr {
+  border: none;
+  border-top: 2px solid #e5e7eb;
+  margin: 3rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .article-content {
+    font-size: 1rem;
+  }
+
+  .article-content h1 {
+    font-size: 1.875rem;
+  }
+
+  .article-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .article-content h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Toast Notifications - Neo-Brutalism Style */
+.Toastify__toast {
+  border: 2px solid #000000 !important;
+  box-shadow: -4px 4px 0 rgba(0, 0, 0, 0.8) !important;
+  border-radius: 8px !important;
+  font-family: inherit !important;
+  font-weight: 600 !important;
+  padding: 16px !important;
+}
+
+.Toastify__toast--success {
+  background-color: #d1fae5 !important;
+  color: #065f46 !important;
+}
+
+.Toastify__toast--error {
+  background-color: #fee2e2 !important;
+  color: #991b1b !important;
+}
+
+.Toastify__toast--warning {
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+}
+
+.Toastify__toast--info {
+  background-color: #dbeafe !important;
+  color: #1e40af !important;
+}
+
+.Toastify__progress-bar {
+  background: #000000 !important;
+}
+
+.Toastify__close-button {
+  color: #000000 !important;
+  opacity: 0.7 !important;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1 !important;
+}
